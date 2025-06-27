@@ -1,28 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { AnimatedTestimonialsDemo } from "./snippets/animated-testimonials-snippet";
-
-const stores = [
-  {
-    image: "/images/image2.png",
-    quote: "Bird showed us to get started, what to do, and how to do it.",
-    name: "Jason Scer",
-  },
-  {
-    image: "/images/shop-2.jpeg",
-    quote:
-      "We had no idea how to get started, but Bird showed us the way. And we were able to create something amazing.",
-    name: "John Prency",
-  },
-
-  {
-    image: "/images/s-2.webp",
-    quote:
-      "The team at Bird is amazing. They helped us create a stunning store that we are proud of.",
-    name: "Miguel Martinez",
-  },
-];
 
 const Testimonials = () => {
   return (

@@ -11,6 +11,7 @@ import GraphicDesign from "./graphic-design";
 import Services from "./services";
 import FAQS from "./faq";
 import Testimonials from "./testimonials";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -91,6 +92,7 @@ export default function Home() {
         </div>
         <FAQS />
       </div>
+      <Footer />
     </div>
   );
 }
