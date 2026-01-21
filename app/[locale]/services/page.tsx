@@ -4,95 +4,47 @@ import { Bot, Code, Globe, Cpu, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
-const services = [
-  {
-    id: "ai-automation",
-    icon: Bot,
-    title: "AI Automation",
-    description:
-      "Transform your business operations with intelligent automation that works 24/7. From workflow automation to custom AI agents, I build solutions that save you hours of manual work every week.",
-    features: [
-      "Custom AI Agents & Assistants",
-      "Workflow Automation (n8n, Make, Zapier)",
-      "Intelligent Chatbots & Support Bots",
-      "API Integrations & Data Sync",
-      "Internal Tools & Dashboards",
-      "Email & Document Automation",
-    ],
-    benefits: [
-      "Save 10+ hours per week on repetitive tasks",
-      "Reduce human error by 90%",
-      "24/7 automated operations",
-      "Scale without hiring more staff",
-    ],
-  },
-  {
-    id: "web-development",
-    icon: Code,
-    title: "Custom Web Development",
-    description:
-      "Full-stack development for complex applications. I build robust, scalable web applications using modern technologies that grow with your business.",
-    features: [
-      "Full-Stack Web Applications",
-      "SaaS Platform Development",
-      "Admin Dashboards & Analytics",
-      "REST & GraphQL APIs",
-      "Database Design & Optimization",
-      "Third-Party Integrations",
-    ],
-    benefits: [
-      "Custom-built for your exact needs",
-      "Scalable architecture",
-      "Clean, maintainable code",
-      "Full ownership of your code",
-    ],
-  },
-  {
-    id: "website-design",
-    icon: Globe,
-    title: "Website Design & Development",
-    description:
-      "Modern, fast, and SEO-friendly websites that convert visitors into customers. From landing pages to full business websites, I create digital experiences that drive results.",
-    features: [
-      "Modern, Responsive Design",
-      "SEO Optimization Built-in",
-      "Fast Loading Performance",
-      "Content Management Systems",
-      "Landing Pages & Marketing Sites",
-      "E-commerce Integration",
-    ],
-    benefits: [
-      "Mobile-first responsive design",
-      "Optimized for search engines",
-      "Fast page load times",
-      "Easy content updates",
-    ],
-  },
-  {
-    id: "ai-integration",
-    icon: Cpu,
-    title: "AI Integration",
-    description:
-      "Enhance your existing systems with cutting-edge AI capabilities. I integrate AI into your workflows, apps, and processes to unlock new possibilities.",
-    features: [
-      "OpenAI & LLM Integration",
-      "Custom AI Feature Development",
-      "Intelligent Data Processing",
-      "AI-Powered Analytics",
-      "Natural Language Processing",
-      "Computer Vision Solutions",
-    ],
-    benefits: [
-      "Leverage latest AI technology",
-      "Seamless system integration",
-      "Custom-trained models",
-      "Competitive advantage",
-    ],
-  },
-];
+import { useLocale, useTranslations } from "next-intl";
 
 export default function ServicesPage() {
+  const t = useTranslations("services");
+  const tCommon = useTranslations("common");
+  const locale = useLocale();
+
+  const services = [
+    {
+      id: "ai-automation",
+      icon: Bot,
+      title: t("aiAutomation.title"),
+      description: t("aiAutomation.description"),
+      features: t.raw("aiAutomation.features"),
+      benefits: t.raw("aiAutomation.benefits"),
+    },
+    {
+      id: "web-development",
+      icon: Code,
+      title: t("webDev.title"),
+      description: t("webDev.description"),
+      features: t.raw("webDev.features"),
+      benefits: t.raw("webDev.benefits"),
+    },
+    {
+      id: "website-design",
+      icon: Globe,
+      title: t("websiteDesign.title"),
+      description: t("websiteDesign.description"),
+      features: t.raw("websiteDesign.features"),
+      benefits: t.raw("websiteDesign.benefits"),
+    },
+    {
+      id: "ai-integration",
+      icon: Cpu,
+      title: t("aiIntegration.title"),
+      description: t("aiIntegration.description"),
+      features: t.raw("aiIntegration.features"),
+      benefits: t.raw("aiIntegration.benefits"),
+    },
+  ];
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Background */}
@@ -105,11 +57,10 @@ export default function ServicesPage() {
           {/* Header */}
           <section className="max-w-6xl mx-auto px-6 text-center mb-20">
             <h1 className="text-4xl md:text-6xl font-bold text-gradient-blue mb-6">
-              Services
+              {t("pageTitle")}
             </h1>
             <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-              Comprehensive AI automation and web development services designed
-              to help your business thrive in the digital age.
+              {t("pageSubtitle")}
             </p>
           </section>
 
@@ -139,26 +90,28 @@ export default function ServicesPage() {
                     {/* Benefits */}
                     <div className="mb-8">
                       <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-                        Key Benefits
+                        {t("keyBenefits")}
                       </h3>
                       <ul className="space-y-2">
-                        {service.benefits.map((benefit, idx) => (
-                          <li
-                            key={idx}
-                            className="flex items-center gap-3 text-neutral-300"
-                          >
-                            <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                            {benefit}
-                          </li>
-                        ))}
+                        {service.benefits.map(
+                          (benefit: string, idx: number) => (
+                            <li
+                              key={idx}
+                              className="flex items-center gap-3 text-neutral-300"
+                            >
+                              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                              {benefit}
+                            </li>
+                          ),
+                        )}
                       </ul>
                     </div>
 
                     <Link
-                      href="/contact"
+                      href={`/${locale}/contact`}
                       className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium transition-colors"
                     >
-                      Get Started
+                      {tCommon("getStarted")}
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -170,10 +123,10 @@ export default function ServicesPage() {
                     }`}
                   >
                     <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-6">
-                      What&apos;s Included
+                      {t("whatsIncluded")}
                     </h3>
                     <ul className="space-y-4">
-                      {service.features.map((feature, idx) => (
+                      {service.features.map((feature: string, idx: number) => (
                         <li
                           key={idx}
                           className="flex items-center gap-3 text-neutral-400 py-2 border-b border-neutral-800 last:border-0"
@@ -193,17 +146,16 @@ export default function ServicesPage() {
           <section className="max-w-4xl mx-auto px-6 mt-24 text-center">
             <div className="p-12 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 via-neutral-900 to-neutral-900">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Get Started?
+                {t("readyToGetStarted")}
               </h2>
               <p className="text-neutral-400 mb-8 max-w-lg mx-auto">
-                Let&apos;s discuss your project and find the best solution for
-                your business needs.
+                {t("readySubtitle")}
               </p>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300"
               >
-                Book a Free Consultation
+                {tCommon("bookCall")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

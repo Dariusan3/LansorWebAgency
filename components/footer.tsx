@@ -1,21 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-const footerLinks = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-  ],
-  services: [
-    { label: "AI Automation", href: "/services#ai-automation" },
-    { label: "Web Development", href: "/services#web-development" },
-    { label: "Website Design", href: "/services#website-design" },
-    { label: "AI Integration", href: "/services#ai-integration" },
-  ],
-};
+import { useLocale, useTranslations } from "next-intl";
 
 const socialLinks = [
   {
@@ -67,13 +54,45 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  const t = useTranslations("footer");
+  const tNav = useTranslations("nav");
+  const tServices = useTranslations("services");
+  const locale = useLocale();
+
+  const navigationLinks = [
+    { label: tNav("home"), href: `/${locale}` },
+    { label: tNav("services"), href: `/${locale}/services` },
+    { label: tNav("projects"), href: `/${locale}/projects` },
+    { label: tNav("about"), href: `/${locale}/about` },
+    { label: tNav("contact"), href: `/${locale}/contact` },
+  ];
+
+  const serviceLinks = [
+    {
+      label: tServices("aiAutomation.title"),
+      href: `/${locale}/services#ai-automation`,
+    },
+    {
+      label: tServices("webDev.title"),
+      href: `/${locale}/services#web-development`,
+    },
+    {
+      label: tServices("websiteDesign.title"),
+      href: `/${locale}/services#website-design`,
+    },
+    {
+      label: tServices("aiIntegration.title"),
+      href: `/${locale}/services#ai-integration`,
+    },
+  ];
+
   return (
     <footer className="border-t border-neutral-800 bg-neutral-950">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+            <Link href={`/${locale}`} className="flex items-center gap-3 mb-4">
               <Image
                 src="/logo/logo.png"
                 alt="Lansor Agency Logo"
@@ -84,8 +103,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-white">Lansor</span>
             </Link>
             <p className="text-neutral-400 leading-relaxed mb-6 max-w-sm">
-              AI Automation & Web Development that helps businesses save time,
-              reduce costs, and scale efficiently.
+              {t("tagline")}
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4">
@@ -107,10 +125,10 @@ const Footer = () => {
           {/* Navigation Column */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Navigation
+              {t("navigation")}
             </h3>
             <ul className="space-y-3">
-              {footerLinks.navigation.map((link) => (
+              {navigationLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -126,10 +144,10 @@ const Footer = () => {
           {/* Services Column */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Services
+              {t("servicesTitle")}
             </h3>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -146,11 +164,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-neutral-500 text-sm">
-            © {new Date().getFullYear()} Lansor. All rights reserved.
+            © {new Date().getFullYear()} Lansor. {t("copyright")}
           </p>
-          <p className="text-neutral-600 text-sm">
-            Built with passion for automation and clean code.
-          </p>
+          <p className="text-neutral-600 text-sm">{t("builtWith")}</p>
         </div>
       </div>
     </footer>

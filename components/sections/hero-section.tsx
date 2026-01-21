@@ -1,10 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { Spotlight } from "@/components/ui/spotlight";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
+  const t = useTranslations("hero");
+  const tCommon = useTranslations("common");
+  const locale = useLocale();
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
@@ -17,41 +22,35 @@ const HeroSection = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-8">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm text-neutral-300">
-            AI-Powered Solutions for Modern Businesses
-          </span>
+          <span className="text-sm text-neutral-300">{t("badge")}</span>
         </div>
 
         {/* Main Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-          <span className="text-gradient-blue">
-            AI Automation & Web Development
-          </span>
+          <span className="text-gradient-blue">{t("title1")}</span>
           <br />
-          <span className="text-white">That Scales Your Business</span>
+          <span className="text-white">{t("title2")}</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          I build smart AI automations and high-performance websites that save
-          time, increase efficiency, and drive growth for startups and
-          businesses.
+          {t("subtitle")}
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="group inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 glow-orange"
           >
-            Book a Free Call
+            {tCommon("bookCall")}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
-            href="/services"
+            href={`/${locale}/services`}
             className="inline-flex items-center gap-2 px-8 py-4 border border-neutral-700 hover:border-primary text-neutral-300 hover:text-white font-medium rounded-full transition-all duration-300"
           >
-            View Services
+            {tCommon("viewServices")}
           </Link>
         </div>
 
@@ -59,15 +58,15 @@ const HeroSection = () => {
         <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-neutral-500 text-sm">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500" />
-            <span>Available for new projects</span>
+            <span>{tCommon("available")}</span>
           </div>
           <div className="flex items-center gap-2">
             <span>🚀</span>
-            <span>Fast Delivery</span>
+            <span>{tCommon("fastDelivery")}</span>
           </div>
           <div className="flex items-center gap-2">
             <span>💼</span>
-            <span>Trusted by startups</span>
+            <span>{tCommon("trustedByStartups")}</span>
           </div>
         </div>
       </div>

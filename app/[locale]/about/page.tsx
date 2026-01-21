@@ -4,82 +4,82 @@ import { Code, Bot, Zap, Target, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
-const skills = [
-  {
-    category: "AI & Automation",
-    items: [
-      "OpenAI / GPT-4",
-      "LangChain",
-      "n8n / Make / Zapier",
-      "Custom AI Agents",
-      "Chatbots",
-      "OCR & Document Processing",
-    ],
-  },
-  {
-    category: "Frontend",
-    items: [
-      "React / Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Responsive Design",
-      "UI/UX Best Practices",
-    ],
-  },
-  {
-    category: "Backend",
-    items: [
-      "Node.js",
-      "Python",
-      "PostgreSQL / MongoDB",
-      "REST & GraphQL APIs",
-      "Supabase / Firebase",
-      "AWS / Vercel",
-    ],
-  },
-  {
-    category: "Tools & Workflow",
-    items: [
-      "Git / GitHub",
-      "CI/CD Pipelines",
-      "Agile Methodology",
-      "Technical Documentation",
-      "Performance Optimization",
-      "Security Best Practices",
-    ],
-  },
-];
-
-const values = [
-  {
-    icon: Target,
-    title: "Results-Driven",
-    description:
-      "Every line of code I write is focused on delivering measurable business outcomes. I don't just build features—I solve problems.",
-  },
-  {
-    icon: Zap,
-    title: "Fast & Efficient",
-    description:
-      "Quick turnaround without compromising quality. I respect deadlines and keep you updated throughout the project.",
-  },
-  {
-    icon: Code,
-    title: "Clean Code",
-    description:
-      "I write maintainable, scalable code that your team can easily understand and extend. No shortcuts, no technical debt.",
-  },
-  {
-    icon: Bot,
-    title: "AI-First Thinking",
-    description:
-      "I always look for opportunities to leverage AI for automation and efficiency gains that give you a competitive edge.",
-  },
-];
+import { useLocale, useTranslations } from "next-intl";
 
 export default function AboutPage() {
+  const t = useTranslations("about");
+  const locale = useLocale();
+
+  const skills = [
+    {
+      category: t("skills.ai"),
+      items: [
+        "OpenAI / GPT-4",
+        "LangChain",
+        "n8n / Make / Zapier",
+        "Custom AI Agents",
+        "Chatbots",
+        "OCR & Document Processing",
+      ],
+    },
+    {
+      category: t("skills.frontend"),
+      items: [
+        "React / Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Responsive Design",
+        "UI/UX Best Practices",
+      ],
+    },
+    {
+      category: t("skills.backend"),
+      items: [
+        "Node.js",
+        "Python",
+        "PostgreSQL / MongoDB",
+        "REST & GraphQL APIs",
+        "Supabase / Firebase",
+        "AWS / Vercel",
+      ],
+    },
+    {
+      category: t("skills.tools"),
+      items: [
+        "Git / GitHub",
+        "CI/CD Pipelines",
+        "Agile Methodology",
+        "Technical Documentation",
+        "Performance Optimization",
+        "Security Best Practices",
+      ],
+    },
+  ];
+
+  const values = [
+    {
+      icon: Target,
+      title: t("values.results.title"),
+      description: t("values.results.description"),
+    },
+    {
+      icon: Zap,
+      title: t("values.efficient.title"),
+      description: t("values.efficient.description"),
+    },
+    {
+      icon: Code,
+      title: t("values.cleanCode.title"),
+      description: t("values.cleanCode.description"),
+    },
+    {
+      icon: Bot,
+      title: t("values.aiFirst.title"),
+      description: t("values.aiFirst.description"),
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Background */}
@@ -94,25 +94,19 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gradient-blue mb-6">
-                  AI Automation Engineer & Full-Stack Developer
+                  {t("title")}
                 </h1>
                 <p className="text-xl text-neutral-400 mb-6 leading-relaxed">
-                  I help businesses save time, reduce costs, and scale by
-                  building smart AI automations and high-quality web
-                  applications.
+                  {t("intro")}
                 </p>
                 <p className="text-neutral-400 mb-8 leading-relaxed">
-                  With deep expertise in both AI technologies and full-stack
-                  development, I bridge the gap between cutting-edge automation
-                  and practical business solutions. My approach is simple:
-                  understand your challenges, design efficient solutions, and
-                  deliver results that actually impact your bottom line.
+                  {t("description")}
                 </p>
                 <Link
-                  href="/contact"
+                  href={`/${locale}/contact`}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300"
                 >
-                  Let&apos;s Work Together
+                  {t("letsWork")}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -120,7 +114,7 @@ export default function AboutPage() {
               {/* Stats Card */}
               <div className="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8">
                 <h2 className="text-lg font-semibold text-white mb-8">
-                  By the Numbers
+                  {t("byTheNumbers")}
                 </h2>
                 <div className="grid grid-cols-2 gap-8">
                   <div>
@@ -128,7 +122,7 @@ export default function AboutPage() {
                       50+
                     </div>
                     <div className="text-sm text-neutral-500">
-                      Projects Delivered
+                      {t("projectsDelivered")}
                     </div>
                   </div>
                   <div>
@@ -136,7 +130,7 @@ export default function AboutPage() {
                       3+
                     </div>
                     <div className="text-sm text-neutral-500">
-                      Years Experience
+                      {t("yearsExperience")}
                     </div>
                   </div>
                   <div>
@@ -144,7 +138,7 @@ export default function AboutPage() {
                       100%
                     </div>
                     <div className="text-sm text-neutral-500">
-                      Client Satisfaction
+                      {t("clientSatisfaction")}
                     </div>
                   </div>
                   <div>
@@ -152,7 +146,7 @@ export default function AboutPage() {
                       24h
                     </div>
                     <div className="text-sm text-neutral-500">
-                      Response Time
+                      {t("responseTime")}
                     </div>
                   </div>
                 </div>
@@ -163,7 +157,7 @@ export default function AboutPage() {
           {/* Values Section */}
           <section className="max-w-6xl mx-auto px-6 py-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              How I Work
+              {t("howIWork")}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {values.map((value, index) => (
@@ -188,7 +182,7 @@ export default function AboutPage() {
           {/* Skills Section */}
           <section className="max-w-6xl mx-auto px-6 py-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Technical Expertise
+              {t("technicalExpertise")}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {skills.map((skill, index) => (
@@ -219,17 +213,16 @@ export default function AboutPage() {
           <section className="max-w-4xl mx-auto px-6 py-16">
             <div className="p-12 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 via-neutral-900 to-neutral-900 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Start a Project?
+                {t("readyToStart")}
               </h2>
               <p className="text-neutral-400 mb-8 max-w-lg mx-auto">
-                Whether you need AI automation, a custom web application, or
-                both—let&apos;s discuss how I can help your business grow.
+                {t("readyDescription")}
               </p>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300"
               >
-                Get in Touch
+                {t("getInTouch")}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

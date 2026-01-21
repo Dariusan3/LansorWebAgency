@@ -1,0 +1,346 @@
+{
+  "common": {
+    "bookCall": "Book a Free Call",
+    "viewServices": "View Services",
+    "contactMe": "Contact Me",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "available": "Available for new projects",
+    "fastDelivery": "Fast Delivery",
+    "trustedByStartups": "Trusted by startups"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AI-Powered Solutions for Modern Businesses",
+    "title1": "AI Automation & Web Development",
+    "title2": "That Scales Your Business",
+    "subtitle": "I build smart AI automations and high-performance websites that save time, increase efficiency, and drive growth for startups and businesses."
+  },
+  "services": {
+    "title": "Services That Drive Results",
+    "pageTitle": "Services",
+    "pageSubtitle": "Comprehensive AI automation and web development services designed to help your business thrive in the digital age.",
+    "subtitle": "From AI automation to custom web development, I deliver solutions that help your business save time, reduce costs, and scale efficiently.",
+    "keyBenefits": "Key Benefits",
+    "whatsIncluded": "What's Included",
+    "readyToGetStarted": "Ready to Get Started?",
+    "readySubtitle": "Let's discuss your project and find the best solution for your business needs.",
+    "aiAutomation": {
+      "title": "AI Automation",
+      "description": "Transform your business operations with intelligent automation that works 24/7. From workflow automation to custom AI agents, I build solutions that save you hours of manual work every week.",
+      "features": [
+        "Custom AI Agents & Assistants",
+        "Workflow Automation (n8n, Make, Zapier)",
+        "Intelligent Chatbots & Support Bots",
+        "API Integrations & Data Sync",
+        "Internal Tools & Dashboards",
+        "Email & Document Automation"
+      ],
+      "benefits": [
+        "Save 10+ hours per week on repetitive tasks",
+        "Reduce human error by 90%",
+        "24/7 automated operations",
+        "Scale without hiring more staff"
+      ]
+    },
+    "webDev": {
+      "title": "Custom Web Development",
+      "description": "Full-stack development for complex applications. I build robust, scalable web applications using modern technologies that grow with your business.",
+      "features": [
+        "Full-Stack Web Applications",
+        "SaaS Platform Development",
+        "Admin Dashboards & Analytics",
+        "REST & GraphQL APIs",
+        "Database Design & Optimization",
+        "Third-Party Integrations"
+      ],
+      "benefits": [
+        "Custom-built for your exact needs",
+        "Scalable architecture",
+        "Clean, maintainable code",
+        "Full ownership of your code"
+      ]
+    },
+    "websiteDesign": {
+      "title": "Website Design & Development",
+      "description": "Modern, fast, and SEO-friendly websites that convert visitors into customers. From landing pages to full business websites, I create digital experiences that drive results.",
+      "features": [
+        "Modern, Responsive Design",
+        "SEO Optimization Built-in",
+        "Fast Loading Performance",
+        "Content Management Systems",
+        "Landing Pages & Marketing Sites",
+        "E-commerce Integration"
+      ],
+      "benefits": [
+        "Mobile-first responsive design",
+        "Optimized for search engines",
+        "Fast page load times",
+        "Easy content updates"
+      ]
+    },
+    "aiIntegration": {
+      "title": "AI Integration",
+      "description": "Enhance your existing systems with cutting-edge AI capabilities. I integrate AI into your workflows, apps, and processes to unlock new possibilities.",
+      "features": [
+        "OpenAI & LLM Integration",
+        "Custom AI Feature Development",
+        "Intelligent Data Processing",
+        "AI-Powered Analytics",
+        "Natural Language Processing",
+        "Computer Vision Solutions"
+      ],
+      "benefits": [
+        "Leverage latest AI technology",
+        "Seamless system integration",
+        "Custom-trained models",
+        "Competitive advantage"
+      ]
+    }
+  },
+  "process": {
+    "title": "How It Works",
+    "subtitle": "A simple, transparent process designed to deliver results quickly and efficiently.",
+    "step1": {
+      "title": "Discovery & Strategy",
+      "description": "We start with a free consultation to understand your business goals, challenges, and requirements. I'll analyze your needs and propose the best solution."
+    },
+    "step2": {
+      "title": "Design & Automation Planning",
+      "description": "I create detailed wireframes, system designs, and automation workflows. You'll see exactly how your solution will work before development begins."
+    },
+    "step3": {
+      "title": "Development & Integration",
+      "description": "Your solution is built with clean, scalable code. I integrate all necessary systems, APIs, and AI capabilities while keeping you updated on progress."
+    },
+    "step4": {
+      "title": "Launch & Support",
+      "description": "After thorough testing, we launch your solution. I provide training, documentation, and ongoing support to ensure everything runs smoothly."
+    }
+  },
+  "whyMe": {
+    "title": "Why Work With Me?",
+    "subtitle": "When you work with me, you get a dedicated partner who is invested in your success. I combine technical expertise with a deep understanding of business needs to deliver solutions that actually make a difference.",
+    "stats": {
+      "projects": "Projects Delivered",
+      "satisfaction": "Client Satisfaction",
+      "response": "Response Time"
+    },
+    "reasons": {
+      "custom": {
+        "title": "Custom-Built Solutions",
+        "description": "No templates or cookie-cutter approaches. Every solution is designed and built specifically for your unique business needs and goals."
+      },
+      "technical": {
+        "title": "Strong Technical Background",
+        "description": "Deep expertise in full-stack development, AI/ML technologies, and automation tools. I stay current with the latest technologies and best practices."
+      },
+      "communication": {
+        "title": "Fast Communication",
+        "description": "Clear, regular updates throughout the project. You'll always know the status of your project and have direct access to me for questions."
+      },
+      "results": {
+        "title": "Focus on Business Results",
+        "description": "I don't just write code—I solve business problems. Every feature is designed to drive measurable outcomes and ROI for your company."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of recent work showcasing AI automation, web development, and integration solutions.",
+    "viewAll": "View All Projects"
+  },
+  "cta": {
+    "title": "Let's Automate Your Business",
+    "subtitle": "Ready to save time, reduce costs, and scale with AI automation and custom web solutions? Let's discuss how I can help transform your business.",
+    "scheduleCall": "Schedule a Free Call",
+    "orEmail": "or send me an email →"
+  },
+  "footer": {
+    "tagline": "AI Automation & Web Development that helps businesses save time, reduce costs, and scale efficiently.",
+    "navigation": "Navigation",
+    "servicesTitle": "Services",
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with passion for automation and clean code."
+  },
+  "contact": {
+    "title": "Let's Build Something Great",
+    "subtitle": "Tell me about your project, and I'll get back to you within 24 hours with ideas on how we can work together.",
+    "whatToExpect": "What to Expect",
+    "quickResponse": "Quick Response",
+    "quickResponseDesc": "I respond to all inquiries within 24 hours",
+    "freeConsult": "Free Consultation",
+    "freeConsultDesc": "No-obligation call to discuss your project",
+    "customSolutions": "Custom Solutions",
+    "customSolutionsDesc": "Every project is tailored to your needs",
+    "preferEmail": "Prefer email?",
+    "formTitle": "Tell me about your project",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "company": "Company (Optional)",
+    "companyPlaceholder": "Your company name",
+    "serviceNeeded": "Service Needed",
+    "selectService": "Select a service",
+    "budgetRange": "Budget Range",
+    "selectBudget": "Select budget",
+    "projectDetails": "Project Details",
+    "projectPlaceholder": "Tell me about your project, goals, and timeline...",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thanks for reaching out! I'll review your project details and get back to you within 24 hours.",
+    "errorTitle": "Error",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "about": {
+    "title": "AI Automation Engineer & Full-Stack Developer",
+    "intro": "I help businesses save time, reduce costs, and scale by building smart AI automations and high-quality web applications.",
+    "description": "With deep expertise in both AI technologies and full-stack development, I bridge the gap between cutting-edge automation and practical business solutions. My approach is simple: understand your challenges, design efficient solutions, and deliver results that actually impact your bottom line.",
+    "letsWork": "Let's Work Together",
+    "byTheNumbers": "By the Numbers",
+    "projectsDelivered": "Projects Delivered",
+    "yearsExperience": "Years Experience",
+    "clientSatisfaction": "Client Satisfaction",
+    "responseTime": "Response Time",
+    "howIWork": "How I Work",
+    "technicalExpertise": "Technical Expertise",
+    "readyToStart": "Ready to Start a Project?",
+    "readyDescription": "Whether you need AI automation, a custom web application, or both—let's discuss how I can help your business grow.",
+    "getInTouch": "Get in Touch",
+    "skills": {
+      "ai": "AI & Automation",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools & Workflow"
+    },
+    "values": {
+      "results": {
+        "title": "Results-Driven",
+        "description": "Every line of code I write is focused on delivering measurable business outcomes. I don't just build features—I solve problems."
+      },
+      "efficient": {
+        "title": "Fast & Efficient",
+        "description": "Quick turnaround without compromising quality. I respect deadlines and keep you updated throughout the project."
+      },
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "I write maintainable, scalable code that your team can easily understand and extend. No shortcuts, no technical debt."
+      },
+      "aiFirst": {
+        "title": "AI-First Thinking",
+        "description": "I always look for opportunities to leverage AI for automation and efficiency gains that give you a competitive edge."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A showcase of AI automation, web development, and integration projects that delivered real business results.",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "results": "Results",
+    "viewAll": "View All Projects",
+    "haveSimilar": "Have a Similar Project in Mind?",
+    "similarDescription": "Let's discuss how I can help you achieve similar results for your business.",
+    "startProject": "Start Your Project",
+    "items": {
+      "ecommerce": {
+        "title": "E-commerce Automation Suite",
+        "category": "AI Automation",
+        "description": "Built a comprehensive automation system for an online retail store. The solution automatically processes orders, syncs inventory across multiple platforms, handles customer inquiries with an AI chatbot, and generates daily reports.",
+        "challenge": "The client was spending 40+ hours per week on manual order processing and customer support.",
+        "solution": "Implemented AI agents for customer support, automated order processing pipelines, and real-time inventory sync.",
+        "results": [
+          "80% reduction in manual work",
+          "24/7 customer support availability",
+          "99.9% order accuracy",
+          "30% increase in customer satisfaction"
+        ]
+      },
+      "analytics": {
+        "title": "SaaS Analytics Dashboard",
+        "category": "Web Development",
+        "description": "Designed and developed a full-stack analytics platform for a B2B SaaS company. Features real-time data visualization, user management, subscription billing, and white-label capabilities.",
+        "challenge": "The company needed a scalable dashboard solution that could handle 10,000+ users with real-time updates.",
+        "solution": "Built with Next.js and PostgreSQL, implemented real-time WebSocket updates and optimized database queries.",
+        "results": [
+          "Sub-100ms response times",
+          "99.99% uptime",
+          "Handles 50K+ concurrent users",
+          "Reduced infrastructure costs by 40%"
+        ]
+      },
+      "customerService": {
+        "title": "AI Customer Service Platform",
+        "category": "AI Integration",
+        "description": "Created an intelligent customer service bot that handles inquiries 24/7, integrates with the company CRM, creates support tickets, and escalates complex issues to human agents.",
+        "challenge": "Support team was overwhelmed with 500+ daily inquiries, causing long response times and customer frustration.",
+        "solution": "Deployed GPT-4 powered chatbot with custom training data, CRM integration, and smart escalation logic.",
+        "results": [
+          "70% of inquiries resolved automatically",
+          "Average response time: 30 seconds",
+          "50% reduction in support costs",
+          "NPS score increased by 25 points"
+        ]
+      },
+      "landingPage": {
+        "title": "Startup Landing Page",
+        "category": "Website Design",
+        "description": "Designed and built a high-converting landing page for a tech startup. Focused on clear messaging, fast performance, and SEO optimization to drive organic traffic and conversions.",
+        "challenge": "The startup needed to launch quickly with a professional web presence that could convert visitors into leads.",
+        "solution": "Created a mobile-first, SEO-optimized landing page with clear CTAs and lead capture forms.",
+        "results": [
+          "12% conversion rate",
+          "95+ PageSpeed score",
+          "300% increase in organic traffic",
+          "Launched in 2 weeks"
+        ]
+      },
+      "internalTools": {
+        "title": "Internal Tools Dashboard",
+        "category": "Web Development",
+        "description": "Built a comprehensive internal tools platform for a growing company. Includes employee management, project tracking, time logging, and automated reporting.",
+        "challenge": "Team was using 5+ different tools for daily operations, causing inefficiency and data silos.",
+        "solution": "Consolidated all tools into a single, custom-built platform with integrations to existing systems.",
+        "results": [
+          "60% improvement in team productivity",
+          "Single source of truth",
+          "Automated weekly reports",
+          "ROI achieved in 3 months"
+        ]
+      },
+      "docProcessing": {
+        "title": "Document Processing Automation",
+        "category": "AI Automation",
+        "description": "Automated document processing workflow for a legal firm. The system extracts key information from contracts, categorizes documents, and populates the case management system.",
+        "challenge": "Paralegals spent 20+ hours weekly manually reviewing and categorizing incoming documents.",
+        "solution": "Implemented OCR and GPT-based extraction with custom validation rules and CMS integration.",
+        "results": [
+          "95% extraction accuracy",
+          "20 hours saved weekly",
+          "Instant document categorization",
+          "Searchable document archive"
+        ]
+      }
+    }
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Choose the plan that fits your needs. All plans include custom solutions tailored to your business.",
+    "mostPopular": "Most Popular",
+    "questionsNote": "Have questions about pricing?",
+    "getInTouch": "Get in touch",
+    "customQuote": "for a custom quote tailored to your specific needs."
+  },
+  "book": {
+    "title": "Book a Free Consultation",
+    "subtitle": "Let's discuss your project and find the best solution for your business."
+  }
+}

@@ -1,9 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, Calendar } from "lucide-react";
 
 const CTASection = () => {
+  const t = useTranslations("cta");
+  const locale = useLocale();
+
   return (
     <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
@@ -13,28 +17,26 @@ const CTASection = () => {
 
           <div className="relative z-10">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Let&apos;s Automate Your Business
+              {t("title")}
             </h2>
             <p className="text-lg text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Ready to save time, reduce costs, and scale with AI automation and
-              custom web solutions? Let&apos;s discuss how I can help transform
-              your business.
+              {t("subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 glow-orange"
               >
                 <Calendar className="w-5 h-5" />
-                Schedule a Free Call
+                {t("scheduleCall")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="mailto:contact@lansor.agency"
                 className="inline-flex items-center gap-2 px-8 py-4 text-neutral-300 hover:text-white font-medium transition-colors"
               >
-                or send me an email →
+                {t("orEmail")}
               </Link>
             </div>
           </div>

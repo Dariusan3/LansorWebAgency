@@ -1,50 +1,48 @@
 "use client";
 
 import { Search, PenTool, Wrench, Rocket } from "lucide-react";
-
-const steps = [
-  {
-    number: "01",
-    icon: Search,
-    title: "Discovery & Strategy",
-    description:
-      "We start with a free consultation to understand your business goals, challenges, and requirements. I'll analyze your needs and propose the best solution.",
-  },
-  {
-    number: "02",
-    icon: PenTool,
-    title: "Design & Automation Planning",
-    description:
-      "I create detailed wireframes, system designs, and automation workflows. You'll see exactly how your solution will work before development begins.",
-  },
-  {
-    number: "03",
-    icon: Wrench,
-    title: "Development & Integration",
-    description:
-      "Your solution is built with clean, scalable code. I integrate all necessary systems, APIs, and AI capabilities while keeping you updated on progress.",
-  },
-  {
-    number: "04",
-    icon: Rocket,
-    title: "Launch & Support",
-    description:
-      "After thorough testing, we launch your solution. I provide training, documentation, and ongoing support to ensure everything runs smoothly.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const ProcessSection = () => {
+  const t = useTranslations("process");
+
+  const steps = [
+    {
+      number: "01",
+      icon: Search,
+      title: t("step1.title"),
+      description: t("step1.description"),
+    },
+    {
+      number: "02",
+      icon: PenTool,
+      title: t("step2.title"),
+      description: t("step2.description"),
+    },
+    {
+      number: "03",
+      icon: Wrench,
+      title: t("step3.title"),
+      description: t("step3.description"),
+    },
+    {
+      number: "04",
+      icon: Rocket,
+      title: t("step4.title"),
+      description: t("step4.description"),
+    },
+  ];
+
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gradient-blue mb-4">
-            How It Works
+            {t("title")}
           </h2>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-            A simple, transparent process designed to deliver results quickly
-            and efficiently.
+            {t("subtitle")}
           </p>
         </div>
 

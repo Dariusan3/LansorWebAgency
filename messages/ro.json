@@ -1,0 +1,346 @@
+{
+  "common": {
+    "bookCall": "Programează un Apel Gratuit",
+    "viewServices": "Vezi Serviciile",
+    "contactMe": "Contactează-mă",
+    "getStarted": "Începe Acum",
+    "learnMore": "Află Mai Multe",
+    "available": "Disponibil pentru proiecte noi",
+    "fastDelivery": "Livrare Rapidă",
+    "trustedByStartups": "De încredere pentru startup-uri"
+  },
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "projects": "Proiecte",
+    "about": "Despre",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Soluții AI pentru Afaceri Moderne",
+    "title1": "Automatizare AI & Dezvoltare Web",
+    "title2": "Care Îți Scalează Afacerea",
+    "subtitle": "Construiesc automatizări AI inteligente și website-uri performante care economisesc timp, cresc eficiența și generează creștere pentru startup-uri și afaceri."
+  },
+  "services": {
+    "title": "Servicii Care Aduc Rezultate",
+    "pageTitle": "Servicii",
+    "pageSubtitle": "Servicii cuprinzătoare de automatizare AI și dezvoltare web concepute pentru a ajuta afacerea ta să prospere în era digitală.",
+    "subtitle": "De la automatizare AI la dezvoltare web personalizată, livrez soluții care ajută afacerea ta să economisească timp, să reducă costurile și să scaleze eficient.",
+    "keyBenefits": "Beneficii Cheie",
+    "whatsIncluded": "Ce Este Inclus",
+    "readyToGetStarted": "Ești Gata Să Începi?",
+    "readySubtitle": "Hai să discutăm despre proiectul tău și să găsim cea mai bună soluție pentru nevoile tale de business.",
+    "aiAutomation": {
+      "title": "Automatizare AI",
+      "description": "Transformă operațiunile afacerii tale cu automatizare inteligentă care funcționează 24/7. De la automatizarea fluxurilor de lucru la agenți AI personalizați, construiesc soluții care îți economisesc ore de muncă manuală în fiecare săptămână.",
+      "features": [
+        "Agenți & Asistenți AI Personalizați",
+        "Automatizare Fluxuri (n8n, Make, Zapier)",
+        "Chatboți Inteligenți & Suport",
+        "Integrări API & Sincronizare Date",
+        "Instrumente Interne & Dashboard-uri",
+        "Automatizare Email & Documente"
+      ],
+      "benefits": [
+        "Economisește peste 10 ore pe săptămână",
+        "Reduce eroarea umană cu 90%",
+        "Operațiuni automatizate 24/7",
+        "Scalează fără a angaja personal suplimentar"
+      ]
+    },
+    "webDev": {
+      "title": "Dezvoltare Web Personalizată",
+      "description": "Dezvoltare full-stack pentru aplicații complexe. Construiesc aplicații web robuste și scalabile folosind tehnologii moderne care cresc odată cu afacerea ta.",
+      "features": [
+        "Aplicații Web Full-Stack",
+        "Dezvoltare Platforme SaaS",
+        "Dashboard-uri Admin & Analytics",
+        "API-uri REST & GraphQL",
+        "Proiectare & Optimizare Baze de Date",
+        "Integrări cu Terți"
+      ],
+      "benefits": [
+        "Construit personalizat pentru nevoile tale",
+        "Arhitectură scalabilă",
+        "Cod curat și ușor de întreținut",
+        "Proprietate deplină asupra codului"
+      ]
+    },
+    "websiteDesign": {
+      "title": "Design & Dezvoltare Website",
+      "description": "Website-uri moderne, rapide și optimizate SEO care transformă vizitatorii în clienți. De la pagini de prezentare la website-uri de business complete, creez experiențe digitale care aduc rezultate.",
+      "features": [
+        "Design Modern și Responsiv",
+        "Optimizare SEO Integrată",
+        "Performanță de Încărcare Rapidă",
+        "Sisteme de Management al Conținutului",
+        "Pagini de Destinație & Site-uri Marketing",
+        "Integrare E-commerce"
+      ],
+      "benefits": [
+        "Design responsiv mobile-first",
+        "Optimizat pentru motoarele de căutare",
+        "Timpi de încărcare rapizi",
+        "Actualizări ușoare de conținut"
+      ]
+    },
+    "aiIntegration": {
+      "title": "Integrare AI",
+      "description": "Îmbunătățește-ți sistemele existente cu capabilități AI de ultimă generație. Integrez AI în fluxurile tale de lucru, aplicații și procese pentru a debloca noi posibilități.",
+      "features": [
+        "Integrare OpenAI & LLM",
+        "Dezvoltare Funcții AI Personalizate",
+        "Procesare Inteligentă a Datelor",
+        "Analytics Bazat pe AI",
+        "Procesarea Limbajului Natural",
+        "Soluții de Computer Vision"
+      ],
+      "benefits": [
+        "Profită de ultima tehnologie AI",
+        "Integrare perfectă în sistem",
+        "Modele antrenate personalizat",
+        "Avantaj competitiv"
+      ]
+    }
+  },
+  "process": {
+    "title": "Cum Funcționează",
+    "subtitle": "Un proces simplu și transparent conceput pentru a livra rezultate rapid și eficient.",
+    "step1": {
+      "title": "Descoperire & Strategie",
+      "description": "Începem cu o consultație gratuită pentru a înțelege obiectivele, provocările și cerințele afacerii tale. Voi analiza nevoile tale și voi propune cea mai bună soluție."
+    },
+    "step2": {
+      "title": "Design & Planificare Automatizare",
+      "description": "Creez wireframe-uri detaliate, design-uri de sistem și fluxuri de automatizare. Vei vedea exact cum va funcționa soluția ta înainte de a începe dezvoltarea."
+    },
+    "step3": {
+      "title": "Dezvoltare & Integrare",
+      "description": "Soluția ta este construită cu cod curat și scalabil. Integrez toate sistemele necesare, API-urile și capabilitățile AI, menținându-te la curent cu progresul."
+    },
+    "step4": {
+      "title": "Lansare & Suport",
+      "description": "După testare riguroasă, lansăm soluția ta. Ofer training, documentație și suport continuu pentru a asigura că totul funcționează perfect."
+    }
+  },
+  "whyMe": {
+    "title": "De Ce Să Lucrezi Cu Mine?",
+    "subtitle": "Când lucrezi cu mine, ai un partener dedicat care este investit în succesul tău. Combin expertiza tehnică cu o înțelegere profundă a nevoilor de business pentru a livra soluții care fac o diferență reală.",
+    "stats": {
+      "projects": "Proiecte Livrate",
+      "satisfaction": "Satisfacție Clienți",
+      "response": "Timp Răspuns"
+    },
+    "reasons": {
+      "custom": {
+        "title": "Soluții Personalizate",
+        "description": "Fără template-uri sau abordări generice. Fiecare soluție este proiectată și construită special pentru nevoile și obiectivele tale unice."
+      },
+      "technical": {
+        "title": "Background Tehnic Solid",
+        "description": "Expertiză profundă în dezvoltare full-stack, tehnologii AI/ML și instrumente de automatizare. Rămân la curent cu cele mai noi tehnologii și practici."
+      },
+      "communication": {
+        "title": "Comunicare Rapidă",
+        "description": "Actualizări clare și regulate pe tot parcursul proiectului. Vei ști mereu statusul proiectului și vei avea acces direct la mine pentru întrebări."
+      },
+      "results": {
+        "title": "Focus pe Rezultate de Business",
+        "description": "Nu scriu doar cod—rezolv probleme de business. Fiecare funcționalitate este concepută pentru a genera rezultate măsurabile și ROI pentru compania ta."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Proiecte Reprezentative",
+    "subtitle": "O selecție de lucrări recente care prezintă soluții de automatizare AI, dezvoltare web și integrare.",
+    "viewAll": "Vezi Toate Proiectele"
+  },
+  "cta": {
+    "title": "Hai Să-ți Automatizăm Afacerea",
+    "subtitle": "Pregătit să economisești timp, să reduci costurile și să scalezi cu automatizare AI și soluții web personalizate? Hai să discutăm cum te pot ajuta să-ți transformi afacerea.",
+    "scheduleCall": "Programează un Apel Gratuit",
+    "orEmail": "sau trimite-mi un email →"
+  },
+  "footer": {
+    "tagline": "Automatizare AI & Dezvoltare Web care ajută afacerile să economisească timp, să reducă costurile și să scaleze eficient.",
+    "navigation": "Navigare",
+    "servicesTitle": "Servicii",
+    "copyright": "Toate drepturile rezervate.",
+    "builtWith": "Construit cu pasiune pentru automatizare și cod curat."
+  },
+  "contact": {
+    "title": "Hai să construim ceva grozav",
+    "subtitle": "Spune-mi despre proiectul tău și îți voi răspunde în 24 de ore cu idei despre cum putem colabora.",
+    "whatToExpect": "La ce să te aștepți",
+    "quickResponse": "Răspuns Rapid",
+    "quickResponseDesc": "Răspund la toate solicitările în 24 de ore",
+    "freeConsult": "Consultație Gratuită",
+    "freeConsultDesc": "Apel fără obligații pentru a discuta despre proiectul tău",
+    "customSolutions": "Soluții Personalizate",
+    "customSolutionsDesc": "Fiecare proiect este adaptat nevoilor tale",
+    "preferEmail": "Preferi email?",
+    "formTitle": "Spune-mi despre proiectul tău",
+    "name": "Nume",
+    "namePlaceholder": "Numele tău",
+    "email": "Email",
+    "emailPlaceholder": "tu@companie.com",
+    "company": "Companie (Opțional)",
+    "companyPlaceholder": "Numele companiei tale",
+    "serviceNeeded": "Serviciu Necesar",
+    "selectService": "Selectează un serviciu",
+    "budgetRange": "Interval Buget",
+    "selectBudget": "Selectează bugetul",
+    "projectDetails": "Detalii Proiect",
+    "projectPlaceholder": "Spune-mi despre proiectul tău, obiectivele și timeline-ul...",
+    "sendMessage": "Trimite Mesajul",
+    "sending": "Se trimite...",
+    "successTitle": "Mesaj Trimis!",
+    "successMessage": "Mulțumesc pentru mesaj! Voi analiza detaliile proiectului tău și îți voi răspunde în 24 de ore.",
+    "errorTitle": "Eroare",
+    "errorMessage": "Ceva nu a mers bine. Te rugăm să încerci din nou."
+  },
+  "about": {
+    "title": "Inginer Automatizare AI & Dezvoltator Full-Stack",
+    "intro": "Ajut afacerile să economisească timp, să reducă costurile și să scaleze prin construirea de automatizări AI inteligente și aplicații web de calitate.",
+    "description": "Cu expertiză profundă atât în tehnologii AI cât și în dezvoltare full-stack, fac legătura între automatizare de ultimă generație și soluții practice de business. Abordarea mea este simplă: să înțeleg provocările tale, să proiectez soluții eficiente și să livrez rezultate care impactează cu adevărat bottom line-ul.",
+    "letsWork": "Hai Să Lucrăm Împreună",
+    "byTheNumbers": "În Cifre",
+    "projectsDelivered": "Proiecte Livrate",
+    "yearsExperience": "Ani Experiență",
+    "clientSatisfaction": "Satisfacție Clienți",
+    "responseTime": "Timp Răspuns",
+    "howIWork": "Cum Lucrez",
+    "technicalExpertise": "Expertiză Tehnică",
+    "readyToStart": "Pregătit Să Începi un Proiect?",
+    "readyDescription": "Indiferent dacă ai nevoie de automatizare AI, o aplicație web personalizată sau ambele—hai să discutăm cum pot ajuta afacerea ta să crească.",
+    "getInTouch": "Ia Legătura",
+    "skills": {
+      "ai": "AI & Automatizare",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Instrumente & Flux de Lucru"
+    },
+    "values": {
+      "results": {
+        "title": "Orientat spre Rezultate",
+        "description": "Fiecare linie de cod pe care o scriu este concentrată pe livrarea de rezultate de business măsurabile. Nu construiesc doar funcții—rezolv probleme."
+      },
+      "efficient": {
+        "title": "Rapid & Eficient",
+        "description": "Livrare rapidă fără a compromite calitatea. Respect termenele limită și te țin la curent pe parcursul proiectului."
+      },
+      "cleanCode": {
+        "title": "Cod Curat",
+        "description": "Scriu cod ușor de întreținut și scalabil, pe care echipa ta îl poate înțelege și extinde cu ușurină. Fără scurtături, fără datorie tehnică."
+      },
+      "aiFirst": {
+        "title": "Gândire AI-First",
+        "description": "Caut mereu oportunități de a folosi AI pentru automatizare și creșterea eficienței, oferindu-ți un avantaj competitiv."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proiecte",
+    "subtitle": "O prezentare a proiectelor de automatizare AI, dezvoltare web și integrare care au livrat rezultate reale de business.",
+    "challenge": "Provocare",
+    "solution": "Soluție",
+    "results": "Rezultate",
+    "viewAll": "Vezi Toate Proiectele",
+    "haveSimilar": "Ai un Proiect Similar în Minte?",
+    "similarDescription": "Hai să discutăm cum te pot ajuta să obții rezultate similare pentru afacerea ta.",
+    "startProject": "Începe Proiectul",
+    "items": {
+      "ecommerce": {
+        "title": "Suită Automatizare E-commerce",
+        "category": "Automatizare AI",
+        "description": "Am construit un sistem de automatizare cuprinzător pentru un magazin retail online. Soluția procesează automat comenzile, sincronizează stocul pe mai multe platforme, gestionează întrebările clienților cu un chatbot AI și generează rapoarte zilnice.",
+        "challenge": "Clientul petrecea peste 40 de ore pe săptămână procesând manual comenzile și oferind suport clienți.",
+        "solution": "Am implementat agenți AI pentru suport clienți, fluxuri automate de procesare a comenzilor și sincronizare în timp real a stocului.",
+        "results": [
+          "Reducere cu 80% a muncii manuale",
+          "Suport clienți disponibil 24/7",
+          "Acuratețe a comenzilor de 99.9%",
+          "Creștere cu 30% a satisfacției clienților"
+        ]
+      },
+      "analytics": {
+        "title": "Dashboard Analytics SaaS",
+        "category": "Dezvoltare Web",
+        "description": "Am proiectat și dezvoltat o platformă de analytics full-stack pentru o companie SaaS B2B. Include vizualizare de date în timp real, gestionare utilizatori, facturare abonamente și funcții white-label.",
+        "challenge": "Compania avea nevoie de o soluție de dashboard scalabilă care să gestioneze peste 10.000 de utilizatori cu actualizări în timp real.",
+        "solution": "Construit cu Next.js și PostgreSQL, am implementat actualizări în timp real prin WebSocket și am optimizat interogările bazei de date.",
+        "results": [
+          "Timpi de răspuns sub 100ms",
+          "Uptime de 99.99%",
+          "Gestionează peste 50.000 de utilizatori concurenți",
+          "Reducerea costurilor de infrastructură cu 40%"
+        ]
+      },
+      "customerService": {
+        "title": "Platformă AI Serviciu Clienți",
+        "category": "Integrare AI",
+        "description": "Am creat un bot inteligent pentru serviciul clienți care gestionează întrebările 24/7, se integrează cu CRM-ul companiei, creează tichete de suport și escalează problemele complexe către agenți umani.",
+        "challenge": "Echipa de suport era copleșită de peste 500 de solicitări zilnice, cauzând timpi lungi de răspuns și frustrarea clienților.",
+        "solution": "Am lansat un chatbot bazat pe GPT-4 cu date de antrenament personalizate, integrare CRM și logică inteligentă de escaladare.",
+        "results": [
+          "70% din solicitări rezolvate automat",
+          "Timp mediu de răspuns: 30 secunde",
+          "Reducere cu 50% a costurilor de suport",
+          "Scorul NPS a crescut cu 25 de puncte"
+        ]
+      },
+      "landingPage": {
+        "title": "Landing Page pentru Startup",
+        "category": "Design Website",
+        "description": "Am proiectat și construit un landing page cu rată mare de conversie pentru un startup tech. Ne-am concentrat pe mesaje clare, performanță rapidă și optimizare SEO pentru a atrage trafic organic și conversii.",
+        "challenge": "Startup-ul avea nevoie să se lanseze rapid cu o prezență web profesională care să transforme vizitatorii în lead-uri.",
+        "solution": "Am creat un landing page mobile-first, optimizat SEO, cu CTA-uri clare și formulare de captare a lead-urilor.",
+        "results": [
+          "Rată de conversie de 12%",
+          "Scor PageSpeed peste 95",
+          "Creștere cu 300% a traficului organic",
+          "Lansat în 2 săptămâni"
+        ]
+      },
+      "internalTools": {
+        "title": "Dashboard Instrumente Interne",
+        "category": "Dezvoltare Web",
+        "description": "Am construit o platformă cuprinzătoare de instrumente interne pentru o companie în creștere. Include gestionarea angajaților, urmărirea proiectelor, pontaj și raportare automată.",
+        "challenge": "Echipa folosea peste 5 instrumente diferite pentru operațiunile zilnice, cauzând ineficiență și silozuri de date.",
+        "solution": "Am consolidat toate instrumentele într-o singură platformă personalizată, cu integrări în sistemele existente.",
+        "results": [
+          "Îmbunătățire cu 60% a productivității echipei",
+          "O singură sursă de adevăr pentru date",
+          "Rapoarte săptămânale automate",
+          "ROI atins în 3 luni"
+        ]
+      },
+      "docProcessing": {
+        "title": "Automatizare Procesare Documente",
+        "category": "Automatizare AI",
+        "description": "Am automatizat fluxul de procesare a documentelor pentru o firmă de avocatură. Sistemul extrage informații cheie din contracte, categorizează documentele și populează sistemul de gestionare a cazurilor.",
+        "challenge": "Paralegalii petreceau peste 20 de ore pe săptămână revizuind și categorizând manual documentele primite.",
+        "solution": "Am implementat extracție bazată pe OCR și GPT cu reguli de validare personalizate și integrare CMS.",
+        "results": [
+          "Acuratețe de extracție de 95%",
+          "20 de ore economisite săptămânal",
+          "Categorizare instantanee a documentelor",
+          "Arhivă de documente căutabilă"
+        ]
+      }
+    }
+  },
+  "pricing": {
+    "title": "Prețuri Transparente",
+    "subtitle": "Alege planul care se potrivește nevoilor tale. Toate planurile includ soluții personalizate pentru afacerea ta.",
+    "mostPopular": "Cel Mai Popular",
+    "questionsNote": "Ai întrebări despre prețuri?",
+    "getInTouch": "Contactează-ne",
+    "customQuote": "pentru o ofertă personalizată nevoilor tale specifice."
+  },
+  "book": {
+    "title": "Programează o Consultație Gratuită",
+    "subtitle": "Hai să discutăm despre proiectul tău și să găsim cea mai bună soluție pentru afacerea ta."
+  }
+}

@@ -23,52 +23,62 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
-import { CheckCircle, Mail, Clock, MessageCircle } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useLocale, useTranslations } from "next-intl";
+import {
+  CheckCircle,
+  Mail,
+  Clock,
+  MessageCircle,
+  ArrowRight,
+} from "lucide-react";
 
-const FormSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Please enter a valid email"),
-  company: z.string().optional(),
-  service: z.enum([
-    "AI Automation",
-    "Web Development",
-    "Website Design",
-    "AI Integration",
-    "Other",
-  ]),
-  budget: z.enum([
-    "Under $5K",
-    "$5K - $10K",
-    "$10K - $25K",
-    "$25K+",
-    "Not sure yet",
-  ]),
-  message: z.string().min(10, "Please tell me more about your project"),
-});
+const ContactPage = () => {
+  const t = useTranslations("contact");
+  const locale = useLocale();
 
-type FormValues = z.infer<typeof FormSchema>;
+  const FormSchema = z.object({
+    name: z.string().min(2, t("name") + " is required"),
+    email: z.string().email("Please enter a valid email"),
+    company: z.string().optional(),
+    service: z.enum([
+      "AI Automation",
+      "Web Development",
+      "Website Design",
+      "AI Integration",
+      "Other",
+    ]),
+    budget: z.enum([
+      "Under $5K",
+      "$5K - $10K",
+      "$10K - $25K",
+      "$25K+",
+      "Not sure yet",
+    ]),
+    message: z.string().min(10, t("projectPlaceholder")),
+  });
 
-const benefits = [
-  {
-    icon: Clock,
-    title: "Quick Response",
-    description: "I respond to all inquiries within 24 hours",
-  },
-  {
-    icon: MessageCircle,
-    title: "Free Consultation",
-    description: "No-obligation call to discuss your project",
-  },
-  {
-    icon: CheckCircle,
-    title: "Custom Solutions",
-    description: "Every project is tailored to your needs",
-  },
-];
+  type FormValues = z.infer<typeof FormSchema>;
 
-export default function ContactPage() {
+  const benefits = [
+    {
+      icon: Clock,
+      title: t("quickResponse"),
+      description: t("quickResponseDesc"),
+    },
+    {
+      icon: MessageCircle,
+      title: t("freeConsult"),
+      description: t("freeConsultDesc"),
+    },
+    {
+      icon: CheckCircle,
+      title: t("customSolutions"),
+      description: t("customSolutionsDesc"),
+    },
+  ];
+
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
@@ -101,8 +111,8 @@ export default function ContactPage() {
       setSubmitted(true);
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: t("errorTitle"),
+        description: t("errorMessage"),
       });
     } finally {
       setLoading(false);
@@ -121,11 +131,10 @@ export default function ContactPage() {
           {/* Header */}
           <section className="max-w-6xl mx-auto px-6 text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gradient-blue mb-6">
-              Let&apos;s Build Something Great
+              {t("title")}
             </h1>
             <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-              Tell me about your project, and I&apos;ll get back to you within
-              24 hours with ideas on how we can work together.
+              {t("subtitle")}
             </p>
           </section>
 
@@ -136,7 +145,7 @@ export default function ContactPage() {
               <div className="lg:col-span-1">
                 <div className="sticky top-32">
                   <h2 className="text-2xl font-bold text-white mb-6">
-                    What to Expect
+                    {t("whatToExpect")}
                   </h2>
 
                   <div className="space-y-6 mb-12">
@@ -162,7 +171,7 @@ export default function ContactPage() {
                     <div className="flex items-center gap-3 mb-3">
                       <Mail className="w-5 h-5 text-primary" />
                       <span className="font-medium text-white">
-                        Prefer email?
+                        {t("preferEmail")}
                       </span>
                     </div>
                     <a
@@ -180,7 +189,7 @@ export default function ContactPage() {
                 {!submitted ? (
                   <div className="p-8 md:p-10 rounded-2xl border border-neutral-800 bg-neutral-900/50">
                     <h2 className="text-xl font-semibold text-white mb-8">
-                      Tell me about your project
+                      {t("formTitle")}
                     </h2>
 
                     <Form {...form}>
@@ -195,11 +204,11 @@ export default function ContactPage() {
                             render={({ field }) => (
                               <FormItem>
                                 <FormLabel className="text-neutral-300">
-                                  Name *
+                                  {t("name")} *
                                 </FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="Your name"
+                                    placeholder={t("namePlaceholder")}
                                     {...field}
                                     className="bg-neutral-800 border-neutral-700"
                                   />
@@ -215,11 +224,11 @@ export default function ContactPage() {
                             render={({ field }) => (
                               <FormItem>
                                 <FormLabel className="text-neutral-300">
-                                  Email *
+                                  {t("email")} *
                                 </FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="you@company.com"
+                                    placeholder={t("emailPlaceholder")}
                                     {...field}
                                     className="bg-neutral-800 border-neutral-700"
                                   />
@@ -236,11 +245,11 @@ export default function ContactPage() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-neutral-300">
-                                Company (Optional)
+                                {t("company")}
                               </FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="Your company name"
+                                  placeholder={t("companyPlaceholder")}
                                   {...field}
                                   className="bg-neutral-800 border-neutral-700"
                                 />
@@ -256,7 +265,7 @@ export default function ContactPage() {
                             render={({ field }) => (
                               <FormItem>
                                 <FormLabel className="text-neutral-300">
-                                  Service Needed *
+                                  {t("serviceNeeded")} *
                                 </FormLabel>
                                 <Select
                                   onValueChange={field.onChange}
@@ -264,7 +273,9 @@ export default function ContactPage() {
                                 >
                                   <FormControl>
                                     <SelectTrigger className="bg-neutral-800 border-neutral-700">
-                                      <SelectValue placeholder="Select a service" />
+                                      <SelectValue
+                                        placeholder={t("selectService")}
+                                      />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -293,7 +304,7 @@ export default function ContactPage() {
                             render={({ field }) => (
                               <FormItem>
                                 <FormLabel className="text-neutral-300">
-                                  Budget Range
+                                  {t("budgetRange")}
                                 </FormLabel>
                                 <Select
                                   onValueChange={field.onChange}
@@ -301,7 +312,9 @@ export default function ContactPage() {
                                 >
                                   <FormControl>
                                     <SelectTrigger className="bg-neutral-800 border-neutral-700">
-                                      <SelectValue placeholder="Select budget" />
+                                      <SelectValue
+                                        placeholder={t("selectBudget")}
+                                      />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -331,11 +344,11 @@ export default function ContactPage() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="text-neutral-300">
-                                Project Details *
+                                {t("projectDetails")} *
                               </FormLabel>
                               <FormControl>
                                 <Textarea
-                                  placeholder="Tell me about your project, goals, and timeline..."
+                                  placeholder={t("projectPlaceholder")}
                                   className="min-h-[150px] bg-neutral-800 border-neutral-700"
                                   {...field}
                                 />
@@ -361,11 +374,10 @@ export default function ContactPage() {
                       <CheckCircle className="w-8 h-8 text-green-500" />
                     </div>
                     <h2 className="text-2xl font-bold text-white mb-4">
-                      Message Sent!
+                      {t("successTitle")}
                     </h2>
                     <p className="text-neutral-400 max-w-md mx-auto">
-                      Thanks for reaching out! I&apos;ll review your project
-                      details and get back to you within 24 hours.
+                      {t("successMessage")}
                     </p>
                   </div>
                 )}
@@ -378,4 +390,6 @@ export default function ContactPage() {
       </div>
     </div>
   );
-}
+};
+
+export default ContactPage;

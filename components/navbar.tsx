@@ -1,21 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import { AlignJustify, X } from "lucide-react";
+import { AlignJustify, X, Globe } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-
-const navLinks = [
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-];
+import { useLocale, useTranslations } from "next-intl";
+// Locale-aware navigation utilities from next-intl
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const t = useTranslations("nav");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const navLinks = [
+    { label: t("services"), href: "/services" },
+    { label: t("projects"), href: "/projects" },
+    { label: t("about"), href: "/about" },
+  ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  const switchLocale = (newLocale: string) => {
+    // Use next-intl's router which handles locale switching automatically
+    router.replace(pathname, { locale: newLocale });
+    setIsLangOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-neutral-800/50">
@@ -49,13 +62,49 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
+          {/* Desktop CTA & Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-2 px-3 py-2 text-neutral-400 hover:text-white transition-colors rounded-lg hover:bg-neutral-800"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium uppercase">{locale}</span>
+              </button>
+
+              {isLangOpen && (
+                <div className="absolute top-full right-0 mt-2 bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden shadow-xl">
+                  <button
+                    onClick={() => switchLocale("en")}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-neutral-800 transition-colors ${
+                      locale === "en"
+                        ? "text-primary bg-primary/10"
+                        : "text-neutral-300"
+                    }`}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => switchLocale("ro")}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-neutral-800 transition-colors ${
+                      locale === "ro"
+                        ? "text-primary bg-primary/10"
+                        : "text-neutral-300"
+                    }`}
+                  >
+                    Română
+                  </button>
+                </div>
+              )}
+            </div>
+
             <Link
               href="/contact"
               className="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent/90 text-white text-sm font-semibold rounded-full transition-all duration-300"
             >
-              Contact Me
+              {t("contact")}
             </Link>
           </div>
 
@@ -87,12 +136,43 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Mobile Language Switcher */}
+              <div className="flex gap-2 py-2">
+                <button
+                  onClick={() => {
+                    switchLocale("en");
+                    closeMenu();
+                  }}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                    locale === "en"
+                      ? "bg-primary text-white"
+                      : "bg-neutral-800 text-neutral-300"
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => {
+                    switchLocale("ro");
+                    closeMenu();
+                  }}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                    locale === "ro"
+                      ? "bg-primary text-white"
+                      : "bg-neutral-800 text-neutral-300"
+                  }`}
+                >
+                  RO
+                </button>
+              </div>
+
               <Link
                 href="/contact"
                 onClick={closeMenu}
                 className="block w-full text-center px-5 py-3 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 mt-4"
               >
-                Contact Me
+                {t("contact")}
               </Link>
             </div>
           </div>

@@ -3,8 +3,10 @@
 import { InlineWidget } from "react-calendly";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useTranslations } from "next-intl";
 
 const Book = () => {
+  const t = useTranslations("book");
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Background */}
@@ -16,12 +18,9 @@ const Book = () => {
         <main className="pt-16 pb-24">
           <div className="max-w-4xl mx-auto px-6 text-center mb-8">
             <h1 className="text-4xl md:text-6xl font-bold text-gradient-blue mb-4">
-              Book a Free Consultation
+              {t("title")}
             </h1>
-            <p className="text-lg text-neutral-400">
-              Let&apos;s discuss your project and find the best solution for
-              your business.
-            </p>
+            <p className="text-lg text-neutral-400">{t("subtitle")}</p>
           </div>
 
           <div className="max-w-4xl mx-auto px-6">

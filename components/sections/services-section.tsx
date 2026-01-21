@@ -1,71 +1,48 @@
 "use client";
 
 import { Bot, Code, Globe, Cpu } from "lucide-react";
-
-const services = [
-  {
-    icon: Bot,
-    title: "AI Automation",
-    description:
-      "Workflow automation, AI agents, chatbots, and smart integrations that save hours of manual work every week.",
-    features: [
-      "Custom AI Agents",
-      "Workflow Automation",
-      "Chatbots & Assistants",
-      "API Integrations",
-    ],
-  },
-  {
-    icon: Code,
-    title: "Custom Web Development",
-    description:
-      "Full-stack applications, dashboards, SaaS platforms, and robust APIs built for scale and performance.",
-    features: [
-      "Full-Stack Apps",
-      "SaaS Platforms",
-      "Admin Dashboards",
-      "REST & GraphQL APIs",
-    ],
-  },
-  {
-    icon: Globe,
-    title: "Website Design & Development",
-    description:
-      "Modern, fast, and SEO-friendly websites that convert visitors into customers and grow your online presence.",
-    features: [
-      "Responsive Design",
-      "SEO Optimization",
-      "Fast Performance",
-      "Modern UI/UX",
-    ],
-  },
-  {
-    icon: Cpu,
-    title: "AI Integration",
-    description:
-      "Integrate cutting-edge AI capabilities into your existing systems using OpenAI, custom models, and automation tools.",
-    features: [
-      "OpenAI Integration",
-      "Custom AI Features",
-      "Data Processing",
-      "Intelligent Workflows",
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 const ServicesSection = () => {
+  const t = useTranslations("services");
+
+  const services = [
+    {
+      icon: Bot,
+      title: t("aiAutomation.title"),
+      description: t("aiAutomation.description"),
+      features: t.raw("aiAutomation.features") as string[],
+    },
+    {
+      icon: Code,
+      title: t("webDev.title"),
+      description: t("webDev.description"),
+      features: t.raw("webDev.features") as string[],
+    },
+    {
+      icon: Globe,
+      title: t("websiteDesign.title"),
+      description: t("websiteDesign.description"),
+      features: t.raw("websiteDesign.features") as string[],
+    },
+    {
+      icon: Cpu,
+      title: t("aiIntegration.title"),
+      description: t("aiIntegration.description"),
+      features: t.raw("aiIntegration.features") as string[],
+    },
+  ];
+
   return (
     <section id="services" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gradient-blue mb-4">
-            Services That Drive Results
+            {t("title")}
           </h2>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-            From AI automation to custom web development, I deliver solutions
-            that help your business save time, reduce costs, and scale
-            efficiently.
+            {t("subtitle")}
           </p>
         </div>
 

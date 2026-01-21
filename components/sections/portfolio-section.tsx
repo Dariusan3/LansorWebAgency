@@ -2,46 +2,50 @@
 
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-
-const projects = [
-  {
-    title: "E-commerce Automation Suite",
-    category: "AI Automation",
-    description:
-      "Automated order processing, inventory management, and customer support for an online store. Reduced manual work by 80%.",
-    tags: ["AI Agents", "n8n", "API Integration"],
-    gradient: "from-blue-500/20 to-purple-500/20",
-  },
-  {
-    title: "SaaS Dashboard Platform",
-    category: "Web Development",
-    description:
-      "Full-stack analytics dashboard with real-time data visualization, user management, and subscription billing.",
-    tags: ["Next.js", "PostgreSQL", "Stripe"],
-    gradient: "from-emerald-500/20 to-teal-500/20",
-  },
-  {
-    title: "AI-Powered Customer Service Bot",
-    category: "AI Integration",
-    description:
-      "Intelligent chatbot that handles customer inquiries 24/7, integrating with CRM and ticketing systems.",
-    tags: ["OpenAI", "LangChain", "Webhooks"],
-    gradient: "from-orange-500/20 to-red-500/20",
-  },
-];
+import { useLocale, useTranslations } from "next-intl";
 
 const PortfolioSection = () => {
+  const t = useTranslations("portfolio");
+  const tServices = useTranslations("services");
+  const locale = useLocale();
+
+  const projects = [
+    {
+      title: "E-commerce Automation Suite",
+      category: tServices("aiAutomation.title"),
+      description:
+        "Automated order processing, inventory management, and customer support for an online store. Reduced manual work by 80%.",
+      tags: ["AI Agents", "n8n", "API Integration"],
+      gradient: "from-blue-500/20 to-purple-500/20",
+    },
+    {
+      title: "SaaS Dashboard Platform",
+      category: tServices("webDev.title"),
+      description:
+        "Full-stack analytics dashboard with real-time data visualization, user management, and subscription billing.",
+      tags: ["Next.js", "PostgreSQL", "Stripe"],
+      gradient: "from-emerald-500/20 to-teal-500/20",
+    },
+    {
+      title: "AI-Powered Customer Service Bot",
+      category: tServices("aiIntegration.title"),
+      description:
+        "Intelligent chatbot that handles customer inquiries 24/7, integrating with CRM and ticketing systems.",
+      tags: ["OpenAI", "LangChain", "Webhooks"],
+      gradient: "from-orange-500/20 to-red-500/20",
+    },
+  ];
+
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-transparent via-neutral-900/50 to-transparent">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-gradient-blue mb-4">
-            Featured Projects
+            {t("title")}
           </h2>
           <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-            A selection of recent work showcasing AI automation, web
-            development, and integration solutions.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -92,10 +96,10 @@ const PortfolioSection = () => {
         {/* View All Link */}
         <div className="text-center">
           <Link
-            href="/projects"
+            href={`/${locale}/projects`}
             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
           >
-            View All Projects
+            {t("viewAll")}
             <ExternalLink className="w-4 h-4" />
           </Link>
         </div>
