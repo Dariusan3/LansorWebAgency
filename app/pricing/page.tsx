@@ -1,161 +1,163 @@
 "use client";
 
-import { useState } from "react";
-
 import Link from "next/link";
-
-import { PiCheckCircleFill } from "react-icons/pi";
-
+import { CheckCircle, ArrowRight } from "lucide-react";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const plans = [
   {
-    index: 0,
-    name: "Web Basic",
-    price: "500 lei",
-    features: [
-      "Până la 3 pagini",
-      "Design modern cu Tailwind CSS",
-      "Cod curat și rapid cu Next.js",
-      "Complet responsive",
-      "Livrare în 1–3 zile",
-    ],
-    style:
-      "rounded-3xl py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
+    name: "Starter",
+    price: "$2,500",
     description:
-      "Ideal pentru site-uri de prezentare simple. Fără panou de administrare, perfect pentru afaceri mici sau proiecte personale.",
-    button: "Cumpără acum",
+      "Perfect for small businesses needing a professional web presence with basic automation.",
+    features: [
+      "Custom Website (up to 5 pages)",
+      "Responsive Design",
+      "Basic SEO Optimization",
+      "Contact Form Integration",
+      "1 Simple Automation Workflow",
+      "30 Days Support",
+    ],
+    cta: "Get Started",
+    href: "/contact",
+    popular: false,
   },
   {
-    index: 1,
-    name: "Web Business",
-    price: "1000 lei",
-    features: [
-      "Până la 10 pagini",
-      "Design modern personalizat",
-      "Dezvoltare cu Next.js ",
-      "Website complet responsive",
-      "Optimizat pentru performanță",
-      "Răspuns în 24h la suport",
-      "Canal privat de comunicare",
-      "Timp de livrare 3-5 zile",
-    ],
-    style:
-      "rounded-3xl py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
+    name: "Growth",
+    price: "$5,000",
     description:
-      "Perfect pentru afaceri mici și freelanceri care doresc un site profesionist, rapid și adaptat nevoilor lor. Nu include panou de administrare.",
-    button: "Cumpără acum",
+      "Ideal for growing businesses that need more automation and custom development.",
+    features: [
+      "Custom Website (up to 10 pages)",
+      "Advanced UI/UX Design",
+      "Full SEO Optimization",
+      "3 Automation Workflows",
+      "AI Chatbot Integration",
+      "CRM Integration",
+      "Analytics Dashboard",
+      "60 Days Support",
+    ],
+    cta: "Get Started",
+    href: "/contact",
+    popular: true,
   },
   {
-    index: 2,
-    name: "Web Enterprise",
-    feature: "Contactează-ne",
-    price: "Hai să vorbim!",
-    features: [
-      "Website complet responsive",
-      "Design personalizat avansat",
-      "Cod modern: Next.js",
-      "Optimizare SEO și performanță",
-      "Revizii nelimitate",
-      "Răspuns rapid (max 24h)",
-      "Comunicare directă și constantă",
-      "Prioritate în dezvoltare",
-      "Manager de proiect dedicat",
-    ],
-    style:
-      "h-full rounded-3xl py-10 flex flex-col bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
+    name: "Enterprise",
+    price: "Custom",
     description:
-      "Pentru afaceri care au nevoie de o prezență online puternică, personalizată și scalabilă. Ideal pentru proiecte extinse sau cu cerințe speciale.",
-    button: "Contactează-ne",
+      "For businesses with complex needs requiring custom solutions and dedicated support.",
+    features: [
+      "Unlimited Pages & Features",
+      "Custom Web Application",
+      "Unlimited Automations",
+      "Custom AI Solutions",
+      "Full System Integration",
+      "Dedicated Project Manager",
+      "Priority Support",
+      "Ongoing Maintenance",
+    ],
+    cta: "Contact Us",
+    href: "/contact",
+    popular: false,
   },
 ];
 
 const Pricing = () => {
   return (
-    <div
-      className="w-full  md:items-center md:justify-center
-     bg-black/[0.96] antialiased 
-     bg-grid-white/[0.02] relative overflow-hidden"
-    >
-      <Navbar
-        scrollToWebsiteDesign={() => {}}
-        scrollToGraphicDesign={() => {}}
-        scrollToTestimonials={() => {}}
-        scrollToServices={() => {}}
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Background */}
+      <div className="fixed inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none opacity-20" />
 
-      <div className="flex items-center justify-center flex-col   ">
-        <div className="text-5xl pb-10 md:pb-20 text-slate-300 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50">
-          Prețuri transparente
-          <br /> Alegeți planul
-        </div>
-        <div className="grid md:grid-cols-3 gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20  items-start ">
-          {plans.map((plan, index) => (
-            <div
-              key={plan.name}
-              className="h-full flex flex-col justify-between border rounded-3xl px-6  "
-            >
-              <div className={plan.style}>
-                <div className="text-4xl flex  items-center font-medium">
-                  {plan.name}
-                  {/* render feature tag only for enterprise tab*/}
-                  {plan.feature === "Contact Us" && (
-                    <div className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full ml-4 items-center ">
-                      Contact Us
+      <div className="relative z-10">
+        <Navbar />
+
+        <main className="pt-16 pb-24">
+          {/* Header */}
+          <section className="max-w-6xl mx-auto px-6 text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gradient-blue mb-6">
+              Transparent Pricing
+            </h1>
+            <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
+              Choose the plan that fits your needs. All plans include custom
+              solutions tailored to your business.
+            </p>
+          </section>
+
+          {/* Pricing Cards */}
+          <section className="max-w-6xl mx-auto px-6">
+            <div className="grid md:grid-cols-3 gap-8">
+              {plans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`relative rounded-2xl border p-8 flex flex-col ${
+                    plan.popular
+                      ? "border-primary bg-primary/5"
+                      : "border-neutral-800 bg-neutral-900/50"
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-sm font-medium rounded-full">
+                      Most Popular
                     </div>
                   )}
+
+                  <div className="mb-6">
+                    <h2 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h2>
+                    <div className="text-4xl font-bold text-primary mb-4">
+                      {plan.price}
+                    </div>
+                    <p className="text-neutral-400 text-sm">
+                      {plan.description}
+                    </p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {plan.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-3 text-neutral-300 text-sm"
+                      >
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href={plan.href}
+                    className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? "bg-accent hover:bg-accent/90 text-white"
+                        : "border border-neutral-700 hover:border-primary text-neutral-300 hover:text-white"
+                    }`}
+                  >
+                    {plan.cta}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <div className="text-3xl pt-6 ">{plan.price}</div>
-                <div className="py-6">{plan.description}</div>
-
-                <ul>
-                  {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="text-lg  py-2 flex space-x-2 items-center"
-                    >
-                      {/* render checkmark only for enterprise tab*/}
-                      {plan.feature === "Contact Us" ? (
-                        <PiCheckCircleFill className="text-blue-400 mr-2 text-xl" />
-                      ) : (
-                        <PiCheckCircleFill className="text-green-600 mr-2 text-xl" />
-                      )}
-
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className={plan.button}>
-                {index === 0 && (
-                  <Link
-                    href="https://buy.stripe.com/test_5kQcN5fxF10wfcQfNqfMA00"
-                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300"
-                  >
-                    Cumpără acum
-                  </Link>
-                )}
-                {index === 1 && (
-                  <Link
-                    href="https://buy.stripe.com/test_28EcN54T1aB62q4fNqfMA01"
-                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300"
-                  >
-                    Cumpără acum
-                  </Link>
-                )}
-                {index === 2 && (
-                  <Link
-                    href="/contact"
-                    className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-purple-500 to-blue-300"
-                  >
-                    Contactează-ne
-                  </Link>
-                )}
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </section>
+
+          {/* FAQ Note */}
+          <section className="max-w-4xl mx-auto px-6 mt-16 text-center">
+            <p className="text-neutral-500">
+              Have questions about pricing?{" "}
+              <Link
+                href="/contact"
+                className="text-primary hover:text-primary/80 transition-colors"
+              >
+                Get in touch
+              </Link>{" "}
+              for a custom quote tailored to your specific needs.
+            </p>
+          </section>
+        </main>
+
+        <Footer />
       </div>
     </div>
   );
