@@ -1,112 +1,104 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { AlignJustify, X } from "lucide-react";
 
+import { useState } from "react";
+import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import DropDownMenu from "./drop-down-menu";
 
-interface NavbarProps {
-  scrollToWebsiteDesign: () => void;
-  scrollToGraphicDesign: () => void;
-  scrollToTestimonials: () => void;
-  scrollToServices: () => void; // Define scrollToServices function
-}
+const navLinks = [
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+];
 
-const Navbar = ({
-  scrollToWebsiteDesign,
-  scrollToGraphicDesign,
-  scrollToTestimonials,
-  scrollToServices, // Add scrollToServices to props
-}: NavbarProps) => {
-  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleDropDown = () => {
-    setIsDropDownVisible(!isDropDownVisible);
-  };
-
-  const closeDropDown = () => {
-    setIsDropDownVisible(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <div>
-      <div className="p-6 md:p-10 flex items-center justify-between z-50">
-        <div>
-          <Link className="cursor-pointer" href="/">
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-neutral-800/50">
+      <nav className="max-w-6xl mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 cursor-pointer">
             <Image
-              priority
               src="/logo/logo.png"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10 md:w-20 md:h-20"
+              alt="Lansor Agency Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+              priority
             />
+            <span className="hidden sm:block text-lg font-semibold text-white">
+              Lansor
+            </span>
           </Link>
-        </div>
-        <div
-          className="cursor-pointer hidden 
-            md:flex space-x-10 items-center
-             text-slate-300 text-center 
-             bg-clip-text text-transparent 
-             bg-gradient-to-b from-neutral-50
-              to bg-neutral-400 bg-opacity-50"
-        >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-            Website Design
-          </div>
-          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
-            Graphic Design
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-neutral-400 hover:text-white transition-colors duration-200 text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
-          <div onClick={scrollToTestimonials} className="hover:text-gray-50">
-            Testimoniale
-          </div>
-
-          <Link href="/pricing" className="hover:text-gray-50">
-            Prețuri
-          </Link>
-        </div>
-
-        <div className="flex md:hidden">
-          {isDropDownVisible ? (
-            // display an x icon when the drop is visible
-            <div
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-5 py-2.5 bg-accent hover:bg-accent/90 text-white text-sm font-semibold rounded-full transition-all duration-300"
             >
-              <X />
-              <DropDownMenu
-                onClose={closeDropDown}
-                scrollToServices={scrollToServices} // Pass scrollToServices
-              />
-            </div>
-          ) : (
-            <AlignJustify
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            />
-          )}
-        </div>
+              Contact Me
+            </Link>
+          </div>
 
-        <div className="hidden md:flex">
-          <Link
-            href="/contact"
-            className="
-            inline-flex h-12 animate-shimmer items-center justify-center 
-            rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
-            bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors
-             focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
-              focus:ring-offset-slate-50
-
-            "
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden w-10 h-10 flex items-center justify-center text-neutral-300 hover:text-white transition-colors"
+            aria-label="Toggle menu"
           >
-            Contact
-          </Link>
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <AlignJustify className="w-6 h-6" />
+            )}
+          </button>
         </div>
-      </div>
-    </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-neutral-800">
+            <div className="px-6 py-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="block text-neutral-300 hover:text-white transition-colors text-lg font-medium py-2"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                onClick={closeMenu}
+                className="block w-full text-center px-5 py-3 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 mt-4"
+              >
+                Contact Me
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 };
 
