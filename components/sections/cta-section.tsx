@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, Calendar } from "lucide-react";
+import { BookingButton } from "@/components/ui/booking-button";
 
 const CTASection = () => {
   const t = useTranslations("cta");
@@ -24,14 +25,16 @@ const CTASection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href={`/${locale}/contact`}
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 glow-orange"
-              >
-                <Calendar className="w-5 h-5" />
-                {t("scheduleCall")}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <div className="flex flex-col items-center">
+                <BookingButton className="group inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 glow-orange">
+                  <Calendar className="w-5 h-5" />
+                  {t("scheduleCall")}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </BookingButton>
+                <span className="text-xs text-neutral-500 mt-2 font-medium">
+                  {useTranslations("common")("noSpam")}
+                </span>
+              </div>
               <Link
                 href="mailto:contact@lansor.agency"
                 className="inline-flex items-center gap-2 px-8 py-4 text-neutral-300 hover:text-white font-medium transition-colors"

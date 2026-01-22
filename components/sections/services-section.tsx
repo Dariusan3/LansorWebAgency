@@ -1,7 +1,8 @@
 "use client";
 
-import { Bot, Code, Globe, Cpu } from "lucide-react";
+import { Bot, Code, Globe, Cpu, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { BookingButton } from "@/components/ui/booking-button";
 
 const ServicesSection = () => {
   const t = useTranslations("services");
@@ -84,6 +85,14 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Secondary CTA */}
+        <div className="mt-16 text-center">
+          <BookingButton className="inline-flex items-center gap-2 px-6 py-3 border border-neutral-700 hover:border-primary text-neutral-300 hover:text-white font-medium rounded-full transition-all duration-300">
+            {t("readyToGetStarted")}
+            <ArrowRight className="w-4 h-4" />
+          </BookingButton>
         </div>
       </div>
     </section>

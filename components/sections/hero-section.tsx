@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Spotlight } from "@/components/ui/spotlight";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { BookingButton } from "@/components/ui/booking-button";
 
 const HeroSection = () => {
   const t = useTranslations("hero");
@@ -51,13 +52,15 @@ const HeroSection = () => {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href={`/${locale}/contact`}
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 glow-orange"
-          >
-            {tCommon("bookCall")}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          <div className="flex flex-col items-center">
+            <BookingButton className="group inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300 glow-orange">
+              {tCommon("bookStrategyCall")}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </BookingButton>
+            <span className="text-xs text-neutral-500 mt-2 font-medium">
+              {tCommon("qualifyFirst")}
+            </span>
+          </div>
           <Link
             href={`/${locale}/services`}
             className="inline-flex items-center gap-2 px-8 py-4 border border-neutral-700 hover:border-primary text-neutral-300 hover:text-white font-medium rounded-full transition-all duration-300"
