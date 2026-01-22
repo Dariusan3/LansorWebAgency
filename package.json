@@ -17,6 +17,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
     "@tabler/icons-react": "^3.34.0",
+    "@typeform/embed-react": "^4.11.0",
     "@vercel/analytics": "^1.1.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

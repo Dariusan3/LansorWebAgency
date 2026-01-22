@@ -106,7 +106,7 @@ export default function AboutPage() {
 
                 <div className="mb-8 p-6 bg-primary/5 rounded-xl border border-primary/10">
                   <p className="text-lg font-medium text-white italic">
-                    "{t("profile.manifesto")}"
+                    &quot;{t("profile.manifesto")}&quot;
                   </p>
                 </div>
                 <Link
