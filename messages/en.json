@@ -17,6 +17,7 @@
     "contact": "Contact"
   },
   "hero": {
+    "trustBadge": "Built by a real developer — not an agency template",
     "badge": "AI-Powered Solutions for Modern Businesses",
     "title1": "AI Automation & Web Development",
     "title2": "That Scales Your Business",
@@ -201,6 +202,10 @@
     "errorMessage": "Something went wrong. Please try again."
   },
   "about": {
+    "profile": {
+      "role": "AI Automation & Full-Stack Developer",
+      "manifesto": "You’ll work directly with me — no middlemen, no outsourcing. Clear communication, real delivery, real results."
+    },
     "title": "AI Automation Engineer & Full-Stack Developer",
     "intro": "I help businesses save time, reduce costs, and scale by building smart AI automations and high-quality web applications.",
     "description": "With deep expertise in both AI technologies and full-stack development, I bridge the gap between cutting-edge automation and practical business solutions. My approach is simple: understand your challenges, design efficient solutions, and deliver results that actually impact your bottom line.",

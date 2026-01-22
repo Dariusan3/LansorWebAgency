@@ -17,6 +17,7 @@
     "contact": "Contact"
   },
   "hero": {
+    "trustBadge": "Construit de un dezvoltator real — nu un model de agenție",
     "badge": "Soluții AI pentru Afaceri Moderne",
     "title1": "Automatizare AI & Dezvoltare Web",
     "title2": "Care Îți Scalează Afacerea",
@@ -201,6 +202,10 @@
     "errorMessage": "Ceva nu a mers bine. Te rugăm să încerci din nou."
   },
   "about": {
+    "profile": {
+      "role": "Automatizare AI & Dezvoltator Full-Stack",
+      "manifesto": "Vei lucra direct cu mine — fără intermediari, fără outsourcing. Comunicare clară, livrare reală, rezultate reale."
+    },
     "title": "Inginer Automatizare AI & Dezvoltator Full-Stack",
     "intro": "Ajut afacerile să economisească timp, să reducă costurile și să scaleze prin construirea de automatizări AI inteligente și aplicații web de calitate.",
     "description": "Cu expertiză profundă atât în tehnologii AI cât și în dezvoltare full-stack, fac legătura între automatizare de ultimă generație și soluții practice de business. Abordarea mea este simplă: să înțeleg provocările tale, să proiectez soluții eficiente și să livrez rezultate care impactează cu adevărat bottom line-ul.",

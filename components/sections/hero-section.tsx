@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Spotlight } from "@/components/ui/spotlight";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -20,9 +21,20 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-8">
-          <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm text-neutral-300">{t("badge")}</span>
+        {/* Trust Badge */}
+        <div className="inline-flex items-center gap-2 pr-4 pl-1 py-1 rounded-full border border-primary/30 bg-primary/10 mb-8 overflow-hidden hover:border-primary/50 transition-colors cursor-default">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border border-primary/20">
+            <Image
+              src="/darius-profile.png"
+              alt="Darius Osadici"
+              fill
+              className="object-cover"
+              sizes="32px"
+            />
+          </div>
+          <span className="text-sm font-medium text-neutral-200">
+            {t("trustBadge")}
+          </span>
         </div>
 
         {/* Main Headline */}

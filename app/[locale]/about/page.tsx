@@ -2,6 +2,7 @@
 
 import { Code, Bot, Zap, Target, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useLocale, useTranslations } from "next-intl";
@@ -102,6 +103,12 @@ export default function AboutPage() {
                 <p className="text-neutral-400 mb-8 leading-relaxed">
                   {t("description")}
                 </p>
+
+                <div className="mb-8 p-6 bg-primary/5 rounded-xl border border-primary/10">
+                  <p className="text-lg font-medium text-white italic">
+                    "{t("profile.manifesto")}"
+                  </p>
+                </div>
                 <Link
                   href={`/${locale}/contact`}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent/90 text-white font-semibold rounded-full transition-all duration-300"
@@ -112,42 +119,60 @@ export default function AboutPage() {
               </div>
 
               {/* Stats Card */}
-              <div className="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8">
-                <h2 className="text-lg font-semibold text-white mb-8">
-                  {t("byTheNumbers")}
-                </h2>
-                <div className="grid grid-cols-2 gap-8">
-                  <div>
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      50+
-                    </div>
-                    <div className="text-sm text-neutral-500">
-                      {t("projectsDelivered")}
-                    </div>
+              {/* Profile Image */}
+              <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900">
+                <Image
+                  src="/darius-profile.png"
+                  alt="Darius Osadici"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/80 to-transparent">
+                  <p className="text-xl font-bold text-white mb-1">
+                    Darius Osadici
+                  </p>
+                  <p className="text-primary font-medium">
+                    {t("profile.role")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="bg-neutral-900/30 border-y border-neutral-800 backdrop-blur-sm">
+            <div className="max-w-6xl mx-auto px-6 py-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                  <div className="text-4xl font-bold text-primary mb-2">
+                    50+
                   </div>
-                  <div>
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      3+
-                    </div>
-                    <div className="text-sm text-neutral-500">
-                      {t("yearsExperience")}
-                    </div>
+                  <div className="text-sm text-neutral-400">
+                    {t("projectsDelivered")}
                   </div>
-                  <div>
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      100%
-                    </div>
-                    <div className="text-sm text-neutral-500">
-                      {t("clientSatisfaction")}
-                    </div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-primary mb-2">3+</div>
+                  <div className="text-sm text-neutral-400">
+                    {t("yearsExperience")}
                   </div>
-                  <div>
-                    <div className="text-4xl font-bold text-primary mb-2">
-                      24h
-                    </div>
-                    <div className="text-sm text-neutral-500">
-                      {t("responseTime")}
-                    </div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-primary mb-2">
+                    100%
+                  </div>
+                  <div className="text-sm text-neutral-400">
+                    {t("clientSatisfaction")}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-primary mb-2">
+                    24h
+                  </div>
+                  <div className="text-sm text-neutral-400">
+                    {t("responseTime")}
                   </div>
                 </div>
               </div>
